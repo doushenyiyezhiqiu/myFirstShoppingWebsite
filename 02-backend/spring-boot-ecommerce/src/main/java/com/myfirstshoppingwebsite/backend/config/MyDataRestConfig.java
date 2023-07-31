@@ -1,9 +1,6 @@
 package com.myfirstshoppingwebsite.backend.config;
 
-import com.myfirstshoppingwebsite.backend.entity.Country;
-import com.myfirstshoppingwebsite.backend.entity.ProductCategory;
-import com.myfirstshoppingwebsite.backend.entity.State;
-import com.myfirstshoppingwebsite.backend.entity.Product;
+import com.myfirstshoppingwebsite.backend.entity.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.metamodel.EntityType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +43,8 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         disableHttpMethods(Country.class, config, theUnsupportedActions);
         disableHttpMethods(State.class, config, theUnsupportedActions);
+        disableHttpMethods(Order.class, config, theUnsupportedActions);
+
 
         // call an internal helper method
         exposeIds(config);
