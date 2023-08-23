@@ -1,0 +1,1 @@
+Before running the application, you need to have Java and Angular environment.
